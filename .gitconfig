@@ -1,15 +1,22 @@
 [alias]
-	c = commit -am
-	up = pull
-	p = push
+	c = commit
+	ca = commit -a
+	p = pull
+	pu = push
 	s = status -s
 	df = diff --color --color-words --abbrev
+	l = log
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	sm = submodule
+	b = branch
+	tags = tag -l
+	remotes = remote -v
 [color]
 	ui = always
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+	editor = subl -w
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -25,6 +32,14 @@
 	untracked = cyan
 [merge]
 	log = true
+	tool = Kaleidoscope
+	summary = true
+[pull]
+	default = matching
+[push]
+	default = simple
+[branch]
+	autosetupmerge = true
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -40,5 +55,19 @@
 
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-[url "git@github.com:paulirish/"]
-  insteadOf = "git://github.com/paulirish/"
+[url "git@github.com:F1ow/"]
+  insteadOf = "git://github.com/F1ow/"
+[user]
+	name = Florian
+	email = florian.nebenfuehr@gmail.com
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
