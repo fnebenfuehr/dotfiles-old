@@ -58,7 +58,7 @@
 [url "git@github.com:F1ow/"]
   insteadOf = "git://github.com/F1ow/"
 [user]
-	name = Florian
+	name = Florian Nebenfuehr
 	email = florian.nebenfuehr@gmail.com
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"

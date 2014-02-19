@@ -57,6 +57,9 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
+# Pull all Submodules (without branch switch or stashing)
+alias smpull='git sm foreach git pull'
+
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
