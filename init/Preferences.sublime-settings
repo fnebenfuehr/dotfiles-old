@@ -1,7 +1,9 @@
 {
 	// "color_scheme": "Packages/User/colour-schemes/Espresso Soda.tmTheme",
-	"font_face": "Menlo",
+	"theme": "Spacegray.sublime-theme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"font_size": 15,
+	"font_face": "Menlo",
 	"ignored_packages":
 	[
 		"Vintage"
