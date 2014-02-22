@@ -12,7 +12,7 @@ unset file
 . ~/code/z/z.sh
 
 # init rvm
-# source ~/.rvm/scripts/rvm
+source ~/.rvm/scripts/rvm
 
 # init nvm
 # [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
