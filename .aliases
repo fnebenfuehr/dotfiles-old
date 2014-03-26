@@ -58,6 +58,9 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
+# Undo last `git commit`
+alias undocommit="git reset --soft 'HEAD^'"
+
 # Pull all Submodules (without branch switch or stashing)
 alias smpull='git sm foreach git pull'
 
