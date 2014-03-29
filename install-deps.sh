@@ -23,7 +23,8 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 # you need the code CLI tools YOU FOOL.
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
-
+# install meteor
+curl https://install.meteor.com/ | sh
 
 # https://github.com/rupa/z
 # z, oh how i love you
